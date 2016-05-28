@@ -4,7 +4,7 @@ using System.Collections;
 public class TestPlayerScript : MonoBehaviour {
 
 	public float turnSpeed = 2;
-	private float rotateTo;
+	public float rotateTo;
 
 	// Use this for initialization
 	void Start () {
@@ -13,13 +13,19 @@ public class TestPlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float change = -Input.GetAxisRaw ("Mouse X") * turnSpeed;
-		if (Input.GetMouseButton(0) && change != 0) {
-			rotateTo = change + rotateTo;
-		}while (rotateTo > 90)
-			rotateTo = rotateTo - 90;
-		while (rotateTo < 0)
-			rotateTo = + 90;
+		if(Input.GetMouseButton(0)){
+			float change = -Input.GetAxisRaw ("Mouse X") * turnSpeed;
+			if (change != 0) {
+				rotateTo = change + rotateTo;
+			}if (rotateTo < 0)
+				rotateTo = + 360;
+			if (rotateTo > 360)
+				rotateTo = rotateTo - 360;
+			if (180 > rotateTo && rotateTo > 45)
+				rotateTo = rotateTo + 270;
+			if (180<rotateTo && rotateTo < 315)
+				rotateTo = rotateTo - 270;
+		} 
 		transform.rotation = Quaternion.Euler(0, 0, rotateTo);
 	}
 }
