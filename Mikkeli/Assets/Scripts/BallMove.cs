@@ -34,7 +34,7 @@ public class BallMove : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		checkDir ();
 		transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
 		changeTo = rotation;
@@ -73,8 +73,15 @@ public class BallMove : MonoBehaviour {
 		if(other.tag == "Untagged"){
 			Entity hit = other.GetComponent<Entity>();
 			if(hit is Player){
-//				Player hitter = hit;
-
+				Player hitter = (Player) hit;
+				float dir;
+				if (hitter.dir == 1 || hitter.dir == 3){
+					dir = 0;
+				} else{
+					dir =90;
+				}rotation -= hitter.angle;
+				rotation = EntityCollision(dir);
+				rotation += hitter.angle;
 			}else{
 				rotation = EntityCollision(hit.angle);
 			}
