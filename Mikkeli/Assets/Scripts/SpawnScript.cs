@@ -4,7 +4,7 @@ using System.Collections;
 public class SpawnScript : MonoBehaviour {
 
 	public GameObject toSpawn;
-	public Transform spawnPoint;
+	private Transform spawnPoint;
 	public float minTime = 2;
 	public float maxTime = 10;
 
@@ -15,6 +15,7 @@ public class SpawnScript : MonoBehaviour {
 	void Start () {
 		waitTime = Random.Range(minTime, maxTime);
 		timeWaited = 0;
+		spawnPoint = this.transform;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +25,7 @@ public class SpawnScript : MonoBehaviour {
 			timeWaited = 0;
 			Instantiate (toSpawn, spawnPoint.position, Quaternion.identity);
 		} else {
-			timeWaited = + Time.deltaTime;
+			timeWaited =timeWaited+ Time.deltaTime;
 		}
 	}
 }

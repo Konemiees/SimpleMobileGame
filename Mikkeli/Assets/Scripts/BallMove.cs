@@ -9,7 +9,7 @@ public class BallMove : MonoBehaviour {
 	public float Speed = 3.0f;
 	public float minVar = -3;
 	public float maxVar = 3;
-
+	public float changeTo;
 
 	private float rotation;
 	private float dirX;
@@ -36,16 +36,17 @@ public class BallMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		checkDir ();
-		Quaternion.Euler(new Vector3(0, 0, rotation));
-		float next = transform.position.x;
+		transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
+		changeTo = rotation;
+		transform.Translate(new Vector3(Speed*Time.deltaTime, 0, 0));
 	}
 
 
 	private void checkDir(){
 		if (rotation < 0)
-			rotation = + 360;
+			rotation += 360;
 		if (rotation > 360)
-			rotation = rotation - 360;
+			rotation -= 360;
 		if(rotation >= 0 && rotation < 90){
 			dirX = 1;
 			dirY = 1;
@@ -62,23 +63,40 @@ public class BallMove : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter(Collider other){
-		if (other.tag == "Finish")
+		float rota;
+		if (other.tag == "Finish") {
 			Destroy (this.gameObject);
-		if(other.tag == "Ball")
-			int a = 0;
+		}
+		if (other.tag == "Ball") {
+			rotation = other.GetComponent<BallMove>().changeTo;
+		}
 		if(other.tag == "Untagged"){
-			Entity hit = other.GetComponent<Entity>;
+			Entity hit = other.GetComponent<Entity>();
 			if(hit is Player){
+//				Player hitter = hit;
+
 			}else{
-				EntityCollision(hit);
+				rotation = EntityCollision(hit.angle);
 			}
 
 		}
 	}
 
 
-	private void EntityCollision(Entity hit){
-		if(hit.angle = 0 )
+	private float EntityCollision(float angle){
+		float retVal = 0;
+		if (angle == 0) {
+			retVal = 0 - rotation;
+		} if (angle == 90) {
+			retVal = 180-rotation;
+		} if (angle == 45){
+			retVal = rotation-45;
+			retVal = 0-retVal;
+			retVal = retVal+45;
+		} return retVal;
 	}
+
+
+
 
 }
