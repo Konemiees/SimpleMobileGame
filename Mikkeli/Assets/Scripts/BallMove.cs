@@ -39,6 +39,8 @@ public class BallMove : MonoBehaviour {
 		transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
 		changeTo = rotation;
 		transform.Translate(new Vector3(Speed*Time.deltaTime, 0, 0));
+		if (transform.position.y < -7 || transform.position.y > 7 || transform.position.x < -7 || transform.position.x > 7)
+			Destroy (this.gameObject);
 	}
 
 

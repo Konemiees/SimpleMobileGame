@@ -7,6 +7,7 @@ public class SpawnScript : MonoBehaviour {
 	private Transform spawnPoint;
 	public float minTime = 2;
 	public float maxTime = 10;
+	private Object target;
 
 	private float waitTime;
 	private float timeWaited;
@@ -20,12 +21,14 @@ public class SpawnScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (timeWaited >= waitTime) {
-			waitTime = Random.Range (minTime, maxTime);
-			timeWaited = 0;
-			Instantiate (toSpawn, spawnPoint.position, Quaternion.identity);
-		} else {
-			timeWaited =timeWaited+ Time.deltaTime;
+		if (!target) {
+			if (timeWaited >= waitTime) {
+				waitTime = Random.Range (minTime, maxTime);
+				timeWaited = 0;
+				target = Instantiate (toSpawn, spawnPoint.position, Quaternion.identity);
+			} else {
+				timeWaited = timeWaited + Time.deltaTime;
+			}
 		}
 	}
 }

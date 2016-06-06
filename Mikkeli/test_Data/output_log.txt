@@ -1,0 +1,68 @@
+Initialize engine version: 5.1.0f3 (ec70b008569d)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon(TM) HD 6520G      (ID=0x9647)
+    Vendor:   ATI
+    VRAM:     1500 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.195 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Konsta\Desktop\Opiskelu ja koodaus\Konsta\Unity\Projects\Mikkeli\simplemobilegame\Mikkeli\test_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 12cc -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 17.080833 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 296.
+Total: 0.745193 ms (FindLiveObjects: 0.089393 ms CreateObjectMapping: 0.056420 ms MarkObjects: 0.567138 ms  DeleteObjects: 0.030042 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BallMove.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
